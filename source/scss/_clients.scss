@@ -1,0 +1,87 @@
+.clients {
+	position: relative;
+	padding: 0 0 70px 0;
+	background: $color_7;
+}
+.clients-title {}
+.info {
+	&__text {
+		display: inline-block;
+		margin: 10px 0 10px 10px;
+		color: $color_2;
+	}
+	&__max-balance {color: $color_2;}
+}
+
+.table {
+	margin: 0 auto;
+	padding: 0 20px;
+	background: #fff;
+	border: 2px solid $color_2;
+	border-collapse: collapse;
+	&__headers {}
+	&__header {
+		padding: 20px 0;
+		border: 2px solid $color_2;
+		&_name {}
+		&_company {}
+		&_email {}
+		&_phone {}
+		&_registered {}
+		&_balance {}
+	}
+}
+.table__data {
+	padding: 10px 10px 10px 20px;
+	border: 1px solid $color_1;
+	text-align: center;
+	font-size: 13px;
+}
+.delete-btn {
+	display: none;
+	position: absolute;
+	width: 50px;
+	height: 35px;
+	margin: 0;
+	background: $color_6 url('../img/bin.svg') center/auto 25px no-repeat;
+	border: 1px solid $color_2;
+	border-bottom: 4px solid $color_2;
+	&:active {border-bottom: 1px solid $color_2;}
+}
+.delete-client {display: none;}
+.modal {
+	&__message {}
+	&__clientName {}
+	&__yes {}
+	&__no {}
+}
+.delete-success {
+	position: fixed;
+	top: 100%;
+	left: 100%;
+	transform: translate(-100%, -100%);
+	width: 200px;
+	margin: -20px;
+	padding: 10px;
+	opacity: 0;
+	transition: 0.5s;
+	&__message {
+		margin: 5px 0 0 0;
+		font-size: 14px;
+	}
+}
+.up {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translate(-50%, -50%);
+	width: 40px;
+	height: 40px;
+	border-radius: 10px;
+	border: 1px solid $color_2;
+	border-bottom: 4px solid $color_2;
+	background: $color_6;
+	outline: none;
+	cursor: pointer;
+	&__img {}
+}

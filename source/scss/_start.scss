@@ -1,0 +1,103 @@
+.start {}
+.modal-window {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.4);
+	z-index: 5;
+}
+.modal-body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100%;
+}
+.form {
+	max-width: 320px;
+	max-height: 400px;
+	padding: 30px 20px;
+	background: $color_1;
+	border: 2px solid $color_2;
+	border-radius: 5px;
+	text-align: center;
+	box-sizing: border-box;
+	box-shadow: 0 0 10px $color_2;
+}
+.input {
+	width: 250px;
+	margin: 10px 0;
+	padding: 0 10px;
+	height: 35px;
+	border-radius: 5px;
+}
+.greet{
+	max-height: 300px;
+	&__text {
+		margin: 0 0 10px 0;
+		color: $color_4;
+		text-align: center;
+	}
+	&__login {}
+	&__create {}
+}
+.auth-window, .reg-window {display: none;}
+.auth {
+	&__input-email, &__input-password {
+		position: relative;
+		display: block;
+	}
+	&__input {}
+	&__login {}
+	&__create {margin: 0;}
+	&__message-error {}
+}
+.reg {
+	max-height: 500px;
+	&__name {}
+	&__name-input {}
+	&__email {}
+	&__email-input {}
+	&__pass {}
+	&__pass-input {}
+	&__create {}
+	&__message-error {}
+}
+.message-error, .hint {
+	position: absolute;
+	padding: 3px;
+	background: $color_6;
+	color: $color_error;
+	border: 1px solid $color_2;
+	border-radius: 5px;
+	white-space: nowrap;
+	opacity: 0;
+	transition: 0.5s;
+}
+.message-error {
+	left: 50%;
+	transform: translate(-50%);
+	text-align: center;
+	font-size: 14px;
+	font-size: 16px;
+}
+.hint {
+	top: 0;
+	right: 0;
+	font-size: 12px;
+	text-transform: none;
+	&::after {
+		content: '';
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		transform: translate(-50%, 110%);
+		display: block;
+		width: 0px;
+		height: 0;
+		border: 0;
+		border: 4px solid transparent;
+		border-top: 4px solid $color_2;
+	}
+}
