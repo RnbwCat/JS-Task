@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+<!-- Аутентификация -->
+<div class="start">
+	<div class="modal-window greet-window">
+		<div class="modal-body">
+			<form action="#" class="greet form">
+				<h3 class="greet__text text">Привет! Войди или зарегистрируйся =)</h3>
+				<input type="button" class="greet__login btn" name="login" value="У меня уже есть аккаунт">
+				<input type="button" class="greet__create btn" name="create" value="Создать аккаунт">
+			</form>
+		</div>
+	</div>
+
+	<div class="modal-window auth-window">
+		<div class="modal-body">
+			<form action="#" class="auth form">
+				<label for="authEmail" class="auth__input-email text">Почта:
+				<p class="hint">Не может быть пустым</p></label>
+				<input type="email" id="authEmail" class="auth__input input" name="email" value="Введи email">
+				<label for="authPassword" class="auth__input-password text">Пароль:
+				<p class="hint">Не может быть пустым</p></label>
+				<input type="password" id="authPassword" class="auth__input input" name="password" value="Введи пароль" maxlength="8">
+				<p class="auth__message-invalid message-error text">Неверный логин или пароль</p>
+				<input type="submit" class="auth__login btn" name="login" value="Войти">
+				<input type="button" class="auth__create btn" value="Создать аккаунт">
+			</form>
+		</div>
+	</div>
+
+	<div class="modal-window reg-window">
+		<div class="modal-body">
+			<form action="#" class="reg form">
+				<label for="name" class="reg__name text">Меня зовут:</label>
+				<input type="text" name="name" id="name" class="reg__name-input input" value="Имя" required>
+				<label for="email" class="reg__email text">Моя почта:</label>
+				<input type="email" name="email" id="email" class="reg__email-input input" value="Введи email" required>
+				<label for="pass" class="reg__pass text">Мой пароль:</label>
+				<input type="password" name="password" maxlength="8" id="pass" class="reg__pass-input input" value="Введи пароль" required>
+				<p class="reg__message message-error text">Проверь правильность заполнения формы.</p>
+				<input type="submit" class="reg__create btn" value="Создать аккаунт">
+			</form>
+		</div>
+	</div>
+</div>
+<!-- /Аутентификация -->
+
+<!-- Основной контент -->
+<div class="fullscreen" id="home">
+	<nav class="nav">
+		<div class="container">
+			<div class="nav__box">
+				<div class="logo">
+					<div class="logo__img">L</div>
+				</div>
+				<ul class="list">
+					<li class="list__item active"><a href="#home" class="list__link">Главная</a></li>
+					<li class="list__item"><a href="#clients" class="list__link">Клиенты</a></li>
+					<li class="list__item"><a href="#we-here" class="list__link">Карта</a></li>
+				</ul>
+				<div class="other">
+					<div class="setting">
+						<a href="#" class="setting__link btn"></a>
+						<ul class="setting__list">
+							<li class="setting__item"><button class="setting__delete">Удалить аккаунт</button></li>
+						</ul>
+					</div>
+					<input type="button" name="exit" value="Выход" class="exit btn">
+				</div>
+			</div>
+		</div>
+		<div class="modal-window del-acc-window">
+			<div class="modal-body">
+				<div class="delete-account form">
+					<h3 class="delete-account__text text">Удалить аккаунт?</h3>
+				<input type="button" class="delete-account__yes btn" name="login" value="Да">
+				<input type="button" class="delete-account__no btn" name="create" value="Нет">
+				</div>
+			</div>
+		</div>
+	</nav>
+</div>
+
+<div class="clients" id="clients">
+	<div class="container">
+		<h2 class="clients-title title">Клиенты</h2>
+		<table class="table">
+			<div class="info">
+				<span class="info__text">Наибольший баланс:</span>
+				<a href="#" class="info__max-balance">$</a>
+			</div>
+			<tr class="table__headers">
+				<th class="table__header table__header_balance">Баланс</th>
+				<th class="table__header table__header_name">Имя</th>
+				<th class="table__header table__header_company">Компания</th>
+				<th class="table__header table__header_email">Почта</th>
+				<th class="table__header table__header_phone">Телефон</th>
+				<th class="table__header table__header_registered">Дата регистрации</th>
+			</tr>
+		</table>
+
+		<div class="modal-window delete-client">
+			<div class="modal-body">
+				<div class="modal form">
+					<p class="modal__message text">Вы действительно хотите удалить <span class="modal__clientName text"></span>?</p>
+					<button class="modal__yes btn">Да</button>
+					<button class="modal__no btn">Нет</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="delete-success form">
+			<p class="delete-success__message text">Данные успешно удалены.</p>
+		</div>
+
+		<button class="up btn"><img src="img/up.svg" alt="Вверх" class="up__img"></button>
+	</div>
+</div>
+
+<div class="we-here" id="we-here">
+	<h2 class="we-here-title title">Мы рядом!</h2>
+	<div class="we-here-map" id="map" style="width: 100%; height: 400px"></div>
+</div>
+<!-- /Основной контент -->
+
+<!-- Подвал -->
+
+<!-- /Подвал -->
+<!-- Скрипты -->
+<script src="js/main.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/settings.js"></script>
+<script src="js/clients.js"></script>
+<script src="js/map.js"></script>
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?AIzaSyDkLEdBeInD3Hm0pZVbZuex-CvfyxseyRo&callback=initMap">
+</script>
+<!-- Скрипты -->
+</body>
+</html>

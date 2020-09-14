@@ -1,0 +1,97 @@
+//=== Подключение шрифтов ===
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
+//=== /Подключение шрифтов ===
+
+//=== Переменные ===
+$color_1: #366161;
+$color_2: #123F3F;
+$color_4: #A4E0D8;
+$color_5: #5C918A;
+$color_6: #ffffff;
+$color_7: #BDC4C5;
+$color_8: #000000;
+$color_button-1: #BFAA9C;
+$color_button-2: #9C8B7E;
+$color_error: #F4654B;
+
+$fw_bold: 700;
+//=== /Переменные ===
+
+// === Основные стили ===
+body {
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-family: 'Source Code Pro', 'Arial', monospace;
+}
+body.lock {overflow: hidden;}
+ul {
+	margin: 0;
+	padding: 0;
+}
+li {list-style: none;}
+a {text-decoration: none;}
+p {margin: 0;}
+input {outline: none;}
+// === /Основные стили ===
+
+.container {
+	max-width: 1070px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.fullscreen {height: 100vh;}
+.title {
+	position: relative;
+	margin: 0 0 30px 0;
+	padding: 30px 0;
+	color: $color_2;
+	text-transform: uppercase;
+	text-align: center;
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%);
+		display: block;
+		width: 100px;
+		height: 2px;
+		background: $color_button-2;
+	}
+}
+.text {
+	text-transform: uppercase;
+	font-size: 20px;
+	color: $color_4;
+}
+//=== Аутентификация ===
+@import '_start.scss';
+//=== /Аутентификация ===
+.btn {
+	width: 250px;
+	margin: 30px 0 0 0;
+	height: 50px;
+	color: $color_2;
+	text-transform: uppercase;
+	background: $color_button-1;
+	border: none;
+	border-radius: 5px;
+	border-bottom: 4px solid $color_button-2;
+	font-weight: $fw_bold;
+	cursor: pointer;
+	box-sizing: border-box;
+	box-shadow: 0 2px 5px $color_8;
+	&:active {border-bottom: none;}
+}
+//=== Основной контент ===
+@import '_nav.scss';
+@import '_clients.scss';
+@import '_we-here.scss';
+//=== /Основной контент ===
+
+//=== Подвал ===
+
+//=== /Подвал ===
